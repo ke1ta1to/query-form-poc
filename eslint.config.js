@@ -3,6 +3,7 @@ import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default tseslint.config(
   { ignores: ["dist"] },
@@ -11,6 +12,7 @@ export default tseslint.config(
       js.configs.recommended,
       ...tseslint.configs.strictTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
+      eslintConfigPrettier,
     ],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
@@ -32,5 +34,5 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
     },
-  }
+  },
 );
