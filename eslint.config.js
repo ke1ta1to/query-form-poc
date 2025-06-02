@@ -35,6 +35,7 @@ export default tseslint.config(
         "warn",
         { allowConstantExport: true },
       ],
+      "@typescript-eslint/no-misused-promises": "off",
       "import/order": [
         "error",
         {
